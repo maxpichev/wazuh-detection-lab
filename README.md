@@ -33,10 +33,9 @@ on the same network. (they can't run together on NAT , since they got same IP. s
 we assigning two different unique addresses to make them establish a connection between each other).
 
 ----------------------------------------------------------------------------------------------------
-1. OSRegex engine(the syntax used in rule Engineering/tunning in Wazuh, specifically in the section of:
-<regex>....</regex> at this case for example)
+1. OSRegex engine(the syntax used in rule Engineering/tunning in Wazuh), # 'regex' in rule tunning
 
-2. Atomic Red Team(By Red canary) - attack libary based on MITRE tactics, used for testing
+3. Atomic Red Team(By Red canary) - attack libary based on MITRE tactics, used for testing
    rules detection.
-3. Sysmon agent on windows endpoint for collecting and monitoring precise logs of the system. 
+4. Sysmon agent on windows endpoint for collecting and monitoring precise logs of the system. 
 -Sysmon using config SwiftOnSecurity(Widely used) for filtering the events that would be triggered. 
