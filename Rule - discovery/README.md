@@ -10,7 +10,9 @@ T1087 – Account Discovery
 T1033 – System Owner / User Discovery
 
 Detection Logic
-Rule ID	Description	Type	Notes
+
+Rule ID	Description	Type	Notes:
+
 92031	Discovery activity executed	Base (Sysmon)	Default SwiftOnSecurity Sysmon rule
 
 900061	whoami.exe execution	Custom base	Extends coverage
