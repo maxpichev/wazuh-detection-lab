@@ -1,3 +1,9 @@
+This home lab focuses on learning attacker behaviour and understanding how SIEM detections work under the hood.
+The goal wasn't to build advanced detections, but to get real hands-on experience with event analysis, rule logic, and correlation
+
+
+
+
 Wazuh lab: 
 
 Hardware:
