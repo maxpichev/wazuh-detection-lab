@@ -1,5 +1,15 @@
 <group name="local.discovery,windows,sysmon">
 
+  
+<rule id="900049" level="15">
+  <if_sid>92031</if_sid>
+  <options>no_log</options>
+
+ <field name="win.eventdata.Image" type="pcre2">(?i)\\net1\.exe</field>
+
+  <description>[SUPPRESS] net1.exe discovery (wrapped 92031)</description>
+</rule>
+  
   <rule id="900050" level="7">
     <if_group>sysmon_event1</if_group>
     <field name="win.system.eventID">1</field>
