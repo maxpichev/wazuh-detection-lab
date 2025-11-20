@@ -4,50 +4,50 @@ to understand attacker behavior and see how detections actually work behind the 
 I wasn’t trying to build a huge enterprise cluster or “advanced” detections.
 The point was to get real hands-on experience with:
 
-how Windows logs look in raw form
+## - how Windows logs look in raw form
 
-how Sysmon reports process creation
+## - how Sysmon reports process creation
 
-how Wazuh rules trigger
+## - how Wazuh rules trigger
 
-how correlation works
+## - how correlation works
 
-what real alerts look like and how to triage them
+## - what real alerts look like and how to triage them
 
 I wanted a clear mental model of how SIEM logic connects to the alerts a Tier-1 analyst sees.
 This lab helped me understand that end-to-end.
 
 Wazuh Lab Structure
-Virtualization
+## Virtualization ##
 
 I used VirtualBox with two VMs:
 
-Ubuntu 24.04 LTS – Wazuh Stack
+## - Ubuntu 24.04 LTS – Wazuh Stack
 
-Wazuh Manager
+** Wazuh Manager
 
-Wazuh Indexer
+** Wazuh Indexer
 
-Wazuh Dashboard
+** Wazuh Dashboard
 
-Windows 10 Pro – Endpoint
+## - Windows 10 Pro – Endpoint
 
-Sysmon + SwiftOnSecurity config
+** Sysmon + SwiftOnSecurity config
 
-Wazuh agent
+** Wazuh agent
 
-Test scripts, PowerShell payloads, MiniDump tests, scheduled task tests
+** Test scripts, PowerShell payloads, MiniDump tests, scheduled task tests
 
-Networking
-Ports Used
+## Networking ##
+Ports Used:
 
-1514/TCP & UDP – agent → manager data channel
+** 1514/TCP & UDP – agent - manager data channel
 
-1515/TCP – agent registration
+** 1515/TCP – agent registration
 
-443/HTTPS – Wazuh Dashboard (accessed from my Windows host via browser)
+** 443/HTTPS – Wazuh Dashboard (accessed from my Windows host via browser)
 
-Routing Setup
+Routing Setup:
 
 Both machines use:
 
@@ -57,13 +57,13 @@ Host-only adapter so the Ubuntu server and Windows endpoint have unique local IP
 
 NAT alone gives both VMs the same outbound identity, so the second adapter is required for proper endpoint-to-SIEM communication.
 
-Tools and Data Sources
-Sysmon (SwiftOnSecurity config)
+## Tools and Data Sources
+** Sysmon (SwiftOnSecurity config)
 
 Sysmon provides detailed process creation logs (Event ID 1), which I use as the main data source for my custom Wazuh rules.
 The SwiftOnSecurity config filters out noise so only meaningful events appear.
 
-Atomic Red Team (Red Canary)
+** Atomic Red Team (Red Canary)
 
 I used specific Atomic tests aligned to MITRE ATT&CK techniques to trigger:
 
@@ -79,7 +79,7 @@ scheduled task persistence
 
 ATR helped validate each rule in realistic scenarios.
 
-Goal of This Lab
+## Goal of This Lab ##
 
 To build a clear understanding of:
 
