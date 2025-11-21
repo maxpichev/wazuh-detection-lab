@@ -18,6 +18,7 @@ I wanted a clear mental model of how SIEM logic connects to the alerts a Tier-1 
 This lab helped me understand that end-to-end.
 
 
+
 🏛️ Lab Architecture
 
 * Windows 10 (Sysmon + Wazuh Agent)
@@ -25,6 +26,7 @@ This lab helped me understand that end-to-end.
 * Host-only Network
         ↓
 * Ubuntu 24.04 (Wazuh Manager + Indexer + Dashboard)
+
 
 
 🖥️ Virtualization Setup (VirtualBox)
@@ -47,6 +49,8 @@ I used two VMs:
 
 * Test scripts (PowerShell payloads, MiniDump tests, scheduled task tests)
 
+
+
 🌐 Networking
 Ports Used
 
@@ -65,6 +69,8 @@ Both machines use:
 * Host-only adapter – gives each VM a unique local IP so they can communicate directly
 
 NAT gives both VMs the same outbound identity, so the second adapter is required for proper endpoint → SIEM communication.
+
+
 
 🔍 Tools and Data Sources
 * Sysmon (SwiftOnSecurity config)
@@ -88,6 +94,8 @@ Used specific MITRE-aligned tests to trigger detections:
 
 ATR helps validate each rule in realistic attacker scenarios.
 
+
+
 🎯 Goal of This Lab
 
 To build a clear understanding of:
@@ -101,6 +109,7 @@ To build a clear understanding of:
 * how to investigate alerts as a SOC analyst
 
 * how to tune rules without making them noisy
+
 
 
 🚀 How to Use This Repo (Deploy & Test the Rules)
