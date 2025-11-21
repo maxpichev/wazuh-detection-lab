@@ -1,10 +1,10 @@
-# Encoded PowerShell execution (T1059.001)
+* Encoded PowerShell execution (T1059.001)
 
-# Basic encoded payload
+* Basic encoded payload
 powershell -enc SQBFAFgAIAAiAEkAbQAgAGgAZQByAGUAIgA=
 
-# Using -enc alias
+* Using -enc alias
 powershell -enc UwB5AHMAdABlAG0ALgBIAG8AcwB0AA==
 
-# Suspicious pattern: cmd.exe spawning PowerShell with encoded command
+* Suspicious pattern: cmd.exe spawning PowerShell with encoded command
 cmd.exe /c powershell.exe -enc UwB5AHMAdABlAG0ALgBFCgA=
