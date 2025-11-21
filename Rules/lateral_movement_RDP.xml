@@ -17,7 +17,7 @@
 
   <rule id="999002" level="10">
     <if_sid>999001</if_sid>
-      <field name="win.eventdata.CommandLine" type="pcre2">(?i)\b\d+\s+/dest:2\b</field>
+      <field name="win.eventdata.CommandLine" type="pcre2">(?i)\b\d+\s+/dest:\d+\b</field>
 
     <description>Potential RDP hijacking (tscon session redirect)</description>
     <mitre>
