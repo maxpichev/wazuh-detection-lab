@@ -1,0 +1,4 @@
+# User/group enumeration (T1033)
+
+whoami
+whoami /groups
