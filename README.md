@@ -121,6 +121,7 @@ Example:
    ./deploy_rule.sh discovery.xml
 
 
+
 This script:
 
 * Copies the selected rule into the Wazuh rules directory:
