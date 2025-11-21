@@ -105,19 +105,21 @@ To build a clear understanding of:
 
 🚀 How to Use This Repo (Run the Lab)
 
+
 1. Copy the XML files from Rules/ into your Wazuh manager rules directory:
 
-/var/ossec/etc/rules/
+    /var/ossec/etc/rules/
 
 
 2. Run the deployment script:
 
-./deploy_rule.sh
+   ./deploy_rule.sh
 
 
 3. Restart Wazuh manager:
 
-sudo systemctl restart wazuh-manager
+    sudo systemctl restart wazuh-manager
+
 
  * Use the commands in AttackSimulation/ to generate alerts (PowerShell encoded, tscon lateral movement, MiniDump, discovery, etc).
 
