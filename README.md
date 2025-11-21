@@ -1,3 +1,6 @@
+This project demonstrates end-to-end SIEM rule development, testing, and triage on a Windows endpoint using Sysmon as the primary log source.
+
+
 🧪 Wazuh Home Lab – SIEM Detection and Triage Practice
 
 This home lab is built for one purpose: to understand attacker behavior and see how detections actually work behind the scenes.
