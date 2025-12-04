@@ -86,7 +86,7 @@ Tests were executed using direct command-line simulations aligned to MITRE ATT&C
   * lateral movement (tscon)
   * credential dumping via comsvcs.dll MiniDump
   * scheduled task persistence
-  * Boot or Logon Autostart Execution (Registry Run Keys, reg)
+  * RunKey Persistence (reg)
 
 
 
