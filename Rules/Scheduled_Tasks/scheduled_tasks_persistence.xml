@@ -24,7 +24,7 @@
 
     <field name="win.eventdata.CommandLine" type="pcre2">(?i)Public</field>
 
-    <description>[TEST] schtasks /create with 'Public' in CommandLine</description>
+    <description>[PERSISTENCE] schtasks /create with 'Public' in CommandLine</description>
 
     <group>pers.schtasks.suspicious</group>
   </rule>
