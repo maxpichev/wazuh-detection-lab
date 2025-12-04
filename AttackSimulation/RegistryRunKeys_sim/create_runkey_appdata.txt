@@ -1,1 +1,7 @@
+# RunKey Persistence via reg.exe (T1547.001)
+
+# Add a persistence entry to the CurrentVersion\Run key
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Updater /t REG_SZ /d "C:\Users\max\AppData\Roaming\helper.exe" /f
+
+# Example with a typical attacker path
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Updater /t REG_SZ /d "C:\Users\Public\backdoor.exe" /f
