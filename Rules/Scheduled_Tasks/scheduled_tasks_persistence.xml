@@ -18,22 +18,33 @@
     <group>pers.schtasks.base</group>
   </rule>
 
-
+  
   <rule id="993002" level="12">
     <if_sid>993001</if_sid>
 
-    <field name="win.eventdata.CommandLine" type="pcre2">(?i)(\\Users\\Public\\|\\ProgramData\\|\\Users\\[^\\]+\\AppData\\(Local|Roaming)\\|\.ps1\b|\.vbs\b|\.js\b|\.bat\b|\.cmd\b)</field>
+    <field name="win.eventdata.CommandLine" type="pcre2">(?i)Public</field>
 
-    <description>
-      [PERSISTENCE] Suspicious Scheduled Task: schtasks /create with public/appdata path or script payload
-    </description>
+    <description>[TEST] schtasks /create with 'Public' in CommandLine</description>
+
+    <group>pers.schtasks.suspicious</group>
+  </rule>
+
+ 
+ <rule id="993003" level="12">
+    <if_sid>993001</if_sid>
+
+    <field name="win.eventdata.CommandLine" type="pcre2">(?i)\.(ps1|vbs|js|bat|cmd)\b</field>
+
+    <description>[PERSISTENCE] Suspicious Scheduled Task: schtasks /create with script payload</description>
 
     <mitre>
       <id>T1053</id>
       <id>T1053.005</id>
+      <id>T1059</id>
     </mitre>
 
-    <group>pers.schtasks.suspicious</group>
+    <group>pers.schtasks.suspicious.script</group>
   </rule>
+
 
 </group>
