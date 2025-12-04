@@ -50,7 +50,15 @@ A second-stage rule raises severity when the scheduled task executes payloads
 from suspicious directories (`Public`, `ProgramData`, `AppData`) or script files (`.ps1`, `.bat`, `.vbs`, `.js`, `.cmd`).
 
 ---
+## 6. RunKey Persistence (Registry CurrentVersion\Run)  
+**File:** `runkey_persistence.xml`  
+**MITRE:** T1547.001 (Registry Run Keys / Startup Folder) 
+Detects persistence established via reg.exe modifying the HKCU\Software\Microsoft\Windows\CurrentVersion\Run key.
+Flags cases where the RunKey value points into suspicious user-writable locations such as AppData (Roaming/Local),
+indicating an attempt to launch attacker-controlled payloads on user logon.
+Provides early signal on registry-based persistence techniques often used after initial foothold.
 
+---
 ## Notes
 - All rules were tested on a configured Windows endpoint with Sysmon EventID 1 process creation.
 - Regex patterns use PCRE2 for flexibility across command-line variations.
