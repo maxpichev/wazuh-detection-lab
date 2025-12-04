@@ -1,1 +1,23 @@
 
+<group name="local.runkey_persistence">
+
+  <rule id="994020" level="12">
+    <if_sid>92041</if_sid>
+
+    
+    <field name="win.eventdata.commandLine">CurrentVersion</field>
+    <field name="win.eventdata.commandLine">Run</field>
+
+    
+    <field name="win.eventdata.commandLine">AppData</field>
+    <field name="win.eventdata.commandLine">Roaming</field>
+
+    <description>[PERSISTENCE] RunKey via reg.exe with AppData Roaming path</description>
+
+    <mitre>
+      <id>T1547</id>
+      <id>T1547.001</id>
+    </mitre>
+  </rule>
+
+</group>
