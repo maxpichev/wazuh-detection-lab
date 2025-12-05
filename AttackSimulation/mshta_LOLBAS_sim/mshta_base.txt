@@ -1,1 +1,9 @@
+# LOLBAS: mshta.exe – Base Execution
+# Technique: T1218.005 (Signed Binary Proxy Execution: mshta)
+
+# 1) Benign baseline execution (fires 995001)
+mshta.exe about:blank
+
+# Purpose:
+# Generates a clean Sysmon Event ID 1 to establish normal mshta.exe behavior.
 
