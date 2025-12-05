@@ -1,1 +1,75 @@
+<group name="local.mshta_lolbas,windows,sysmon">
 
+  
+  <rule id="995001" level="5">
+    <if_group>windows</if_group>
+    <field name="win.system.eventID">^1$</field>
+
+    <field name="win.eventdata.Image" type="pcre2">(?i)mshta\.exe$</field>
+
+    <description>[LOLBAS] mshta.exe process execution</description>
+
+    <mitre>
+      <id>T1218</id>
+      <id>T1218.005</id>
+    </mitre>
+
+    <group>lolbas.mshta.base</group>
+  </rule>
+
+
+  
+  <rule id="995002" level="10">
+    <if_sid>995001</if_sid>
+
+    
+    <field name="win.eventdata.CommandLine" type="pcre2">(?i)(https?://|\.hta\b)</field>
+
+    <description>[LOLBAS] mshta.exe loading remote HTA or URL</description>
+
+    <mitre>
+      <id>T1218</id>
+      <id>T1218.005</id>
+    </mitre>
+
+    <group>lolbas.mshta.remote</group>
+  </rule>
+
+
+  
+  <rule id="995003" level="12">
+    <if_sid>995001</if_sid>
+
+    <field name="win.eventdata.CommandLine" type="pcre2">(?i)(javascript:|vbscript:)</field>
+
+    <description>[LOLBAS] mshta.exe executing inline script (javascript: / vbscript:)</description>
+
+    <mitre>
+      <id>T1218</id>
+      <id>T1218.005</id>
+      <id>T1059</id>
+    </mitre>
+
+    <group>lolbas.mshta.inline</group>
+  </rule>
+
+
+  
+  <rule id="995005" level="13">
+    <if_sid>995001</if_sid>
+
+    <field name="win.eventdata.CommandLine" type="pcre2">(?i)powershell\.exe</field>
+
+    <description>[LOLBAS] mshta CommandLine referencing PowerShell</description>
+
+    <mitre>
+      <id>T1218</id>
+      <id>T1218.005</id>
+      <id>T1059</id>
+      <id>T1059.001</id>
+    </mitre>
+
+    <group>lolbas.mshta.powershell.cmdline</group>
+  </rule>
+
+</group>
