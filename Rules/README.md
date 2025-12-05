@@ -81,6 +81,22 @@ invoking `PowerShell` from within the mshta command line
 
 These patterns are strongly associated with phishing payloads, malware loaders, and initial access techniques where mshta is leveraged to bypass application controls and execute scripts under a trusted Windows binary. The rule set provides early detection of mshta-based stagers commonly used in real-world intrusion chains.
 
+---
+
+## 8. certutil.exe LOLBAS Download & Decode Abuse  
+**File:** `certutil_lolbas.xml`  
+**MITRE:** T1105 (Ingress Tool Transfer), T1140 (Deobfuscate/Decode Files or Information) 
+
+Detects abuse of `certutil.exe` as a living-off-the-land binary for downloading and decoding attacker-controlled content.
+A base rule flags any `certutil.exe execution`, while higher-severity rules identify:
+
+use of URLs in the command line (remote download behavior)
+
+use of `/decode` / `-decode` to transform encoded data on disk
+
+downloads that target user-writable locations such as `C:\Users\Public\...`
+
+Together, these detections provide early signal for common intrusion chains where certutil is leveraged to fetch and decode payloads while hiding behind a trusted Windows binary.
 
 ## Notes
 - All rules were tested on a configured Windows endpoint with Sysmon EventID 1 process creation.
