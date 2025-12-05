@@ -1,1 +1,14 @@
+# LOLBAS: mshta.exe – Inline Script Execution (Javascript / VBScript)
+# Technique: T1218.005 (mshta), T1059 (Script Execution)
+
+# 1) Inline Javascript execution (fires 995003)
+mshta.exe "javascript:WScript.Echo('test from mshta')"
+
+# 2) Inline VBScript execution (fires 995003)
+# Note: May not visibly pop a MsgBox on all systems, but still logs telemetry.
+mshta.exe "vbscript:MsgBox(\"test from mshta\")"
+
+# Purpose:
+# Simulates attackers abusing mshta.exe to execute script directly through
+# javascript: or vbscript:, enabling fileless payload delivery.
 
