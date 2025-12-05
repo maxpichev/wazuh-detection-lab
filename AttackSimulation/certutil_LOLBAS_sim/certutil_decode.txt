@@ -1,1 +1,11 @@
+# certutil.exe – Base64 Decode Abuse
+# Technique: T1140 (Deobfuscate/Decode Files or Information)
+
+# 1) Example Base64 decode (fires 996001 + 996003)
+# Note: content here can be harmless; focus is on the /decode flag.
+certutil.exe -decode encoded.txt decoded.bin
+
+# Purpose:
+# Simulates using certutil.exe to decode Base64-encoded data on disk,
+# often used to reconstruct malware or scripts from encoded blobs.
 
