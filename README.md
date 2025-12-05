@@ -88,6 +88,8 @@ Tests were executed using direct command-line simulations aligned to MITRE ATT&C
   * scheduled task persistence
   * RunKey Persistence (reg)
   * System Binary Proxy Execution: Mshta
+  * Ingress Tool Transfer: certutil
+
 
 
 
