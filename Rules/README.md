@@ -65,6 +65,23 @@ indicating an attempt to launch attacker-controlled payloads on user logon.
 Provides early signal on registry-based persistence techniques often used after initial foothold.
 
 ---
+
+## 7. LOLBAS: mshta.exe Remote Script Execution
+File: `mshta_lolbas.xml`
+MITRE: T1218.005 (Signed Binary Proxy Execution: mshta), T1059 (Scripting), T1059.001 (PowerShell)
+
+Detects abuse of `mshta.exe` as a LOLBAS (Living-Off-the-Land Binary) to proxy the execution of attacker-controlled scripts.
+The base rule flags any mshta.exe process creation, while higher-severity rules identify malicious use cases such as:
+
+loading remote `.hta` payloads or `URLs`
+
+executing inline javascript: or vbscript: stagers
+
+invoking `PowerShell` from within the mshta command line
+
+These patterns are strongly associated with phishing payloads, malware loaders, and initial access techniques where mshta is leveraged to bypass application controls and execute scripts under a trusted Windows binary. The rule set provides early detection of mshta-based stagers commonly used in real-world intrusion chains.
+
+
 ## Notes
 - All rules were tested on a configured Windows endpoint with Sysmon EventID 1 process creation.
 - Regex patterns use PCRE2 for flexibility across command-line variations.
