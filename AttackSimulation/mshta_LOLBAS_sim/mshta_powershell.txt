@@ -1,1 +1,10 @@
+# LOLBAS: mshta.exe – PowerShell Invocation
+# Technique: T1218.005 (mshta), T1059.001 (PowerShell)
+
+# 1) mshta.exe invoking PowerShell via inline VBScript (fires 995005)
+mshta.exe "vbscript:CreateObject(\"WScript.Shell\").Run(\"powershell.exe -NoLogo -Command Get-Process\")"
+
+# Purpose:
+# Simulates the mshta → PowerShell execution chain used in real-world intrusions.
+# The CommandLine reference to powershell.exe is what the detection rule matches.
 
