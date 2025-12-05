@@ -66,9 +66,9 @@ Provides early signal on registry-based persistence techniques often used after 
 
 ---
 
-## 7. LOLBAS: mshta.exe Remote Script Execution
-File: `mshta_lolbas.xml`
-MITRE: T1218.005 (Signed Binary Proxy Execution: mshta), T1059 (Scripting), T1059.001 (PowerShell)
+## 7. LOLBAS: mshta.exe Remote Script Execution  
+**File:** `mshta_lolbas.xml`  
+**MITRE:** T1218.005 (Signed Binary Proxy Execution: mshta), T1059 (Scripting), T1059.001 (PowerShell) 
 
 Detects abuse of `mshta.exe` as a LOLBAS (Living-Off-the-Land Binary) to proxy the execution of attacker-controlled scripts.
 The base rule flags any mshta.exe process creation, while higher-severity rules identify malicious use cases such as:
