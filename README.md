@@ -87,6 +87,8 @@ Tests were executed using direct command-line simulations aligned to MITRE ATT&C
   * credential dumping via comsvcs.dll MiniDump
   * scheduled task persistence
   * RunKey Persistence (reg)
+  * System Binary Proxy Execution: Mshta
+
 
 
 
