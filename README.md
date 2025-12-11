@@ -1,4 +1,4 @@
-
+🔗 **YouTube Walkthrough Video:** [https://www.youtube.com/watch?v=gcVvTDXcBoE]
 
 
 This project demonstrates how I built practical detections from scratch, tested them against real attacker techniques, triaged the alerts they generated, and alligned the work to the MITRE ATT&CK framework.
