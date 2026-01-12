@@ -1,4 +1,4 @@
 # Account discovery via net.exe (T1087)
 
 net.exe users
-net.exe user admin
+
