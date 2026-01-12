@@ -1,4 +1,4 @@
 # Local group enumeration (T1069.001)
 
 net.exe localgroup
-net.exe localgroup administrator
+net.exe localgroup administrators
