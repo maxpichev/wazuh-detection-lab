@@ -1,3 +1,5 @@
+TL;DR: Hands-on SOC lab demonstrating how Windows attack behaviors generate telemetry, how Wazuh detections are built, and how alerts are triaged and mapped to MITRE ATT&CK.
+
 🔗 **YouTube Walkthrough Video:** [https://www.youtube.com/watch?v=gcVvTDXcBoE]
 
 
