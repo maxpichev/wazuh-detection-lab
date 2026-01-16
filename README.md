@@ -79,7 +79,7 @@ NAT gives both VMs the same outbound identity, so the second adapter is required
    * Sysmon (SwiftOnSecurity config)
    * Primary log source (Event ID 1).
    * The SwiftOnSecurity config reduces noise so only meaningful events appear.
-   * Some simulations were inspired by common MITRE Atomic-style commands.
+   * Some simulations were inspired by common MITRE ATT&CK Atomic-style techniques and manually executed using direct command-line payloads.
 
 Tests were executed using direct command-line simulations aligned to MITRE ATT&CK techniques:
 
