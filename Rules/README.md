@@ -37,7 +37,9 @@ Highlights potential lateral movement or privilege escalation attempts.
 Advanced / low-frequency RDP abuse technique (edge case)
 
 Primary RDP abuse is usually credential-based logons
-session hijacking via tscon is rarer and typically post-compromise
+session hijacking via tscon is 
+rarer and typically post-compromise
+
 ---
 
 ## 4. Credential Dumping via comsvcs.dll MiniDump  
