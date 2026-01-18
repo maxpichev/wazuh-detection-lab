@@ -34,7 +34,6 @@ Detects suspicious `tscon.exe` usage used for RDP session hijacking, including
 session redirects such as `/1 /dest:2` and `tscon /RDP-Tcp`.  
 Highlights potential lateral movement or privilege escalation attempts.
 
-** 
 Advanced / low-frequency RDP abuse technique (edge case)
 
 Primary RDP abuse is usually credential-based logons
